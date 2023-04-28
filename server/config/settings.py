@@ -62,6 +62,7 @@ LOCAL_APPS = [
 THIRD_PARTY_APPS = [
     'rest_framework',
     'corsheaders',
+    'djoser'
 ]
 
 INSTALLED_APPS += LOCAL_APPS + THIRD_PARTY_APPS
@@ -196,3 +197,6 @@ EMAIL_USE_TLS = env.bool('EMAIL_USE_TLS', False)
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# This is a setting that tells Django to use the CustomUser model as the user model.
+AUTH_USER_MODEL = 'users.CustomUser'
